@@ -1,84 +1,98 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
 <head>
-  <title> Carter's Pizzeria </title>
+  <title>Carter's Pizzeria</title>
 </head>
 <body>
-  
-  <h1> <b>Pizza Ordering Form</b></h1>
-  <h2> Contact Information </h2>
-  <label for="Name"> Name: </label><input type="text" name="Name" id="Name" required><br>
-  <label for="Phone"> Phone: </label><input type="phone" name="Phone" id="Phone" required><br> 
-  <label for="Email"> Email: </label><input type="email" name="Email" id="Email" required><br>
-  <label for="Address"> Address: </label><input type="text" name="Address" id="Address" required>
-  
-  <h2> Select Pizza Size </h2>
-  <label for="Size"> Pizza Size: </label>
-  <select name="pizzaSize" id="pizzaSize" required>
-      <option value="default" selected disabled> -- Select size -- </option>
-      <option value="Medium"> Medium </option>
-      <option value="Large"> Large </option>
-      <option value ="XLarge"> XLarge </option>
+
+<h1><strong>Pizza Ordering Form</strong></h1>
+
+<form>
+
+  <h2>Contact Information</h2>
+
+  <label for="name">Name:</label><input type="text" id="name" name="name" required><br>
+
+  <label for="phone">Phone:</label><input type="tel" id="phone" name="phone" required><br>
+
+  <label for="email">Email:</label><input type="email" id="email" name="email" required><br>
+
+  <label for="address">Address:</label><input type="text" id="address" name="address"><br>
+
+  <h2>Select Pizza Size</h2>
+
+  <label for="pizzaSize">Pizza Size:</label>
+  <select id="pizzaSize" name="pizzaSize" required>
+    <option value="" selected disabled>-- Select size --</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+    <option value="xlarge">XLarge</option>
   </select>
-  <br>
 
-  <h2> Select Sauce </h2>
-  <input type="radio" name="sauceType" required><label> Marinara </label><br>
-  <input type="radio" name="sauceType"><label> Ranch </label><br>
-  <input type="radio" name="sauceType"><label> Garlic Parmesan </label><br>
-  <input type="radio" name="sauceType"><label> No Sauce </label><br>
+  <h2>Select Sauce</h2>
 
-  <h2> Select Toppings </h2>
-  <input type="checkbox" name="toppings"><label> Pepperoni </label>
-  <input type="checkbox" name="toppings"><label> Sausage </label><br>
-  <input type="checkbox" name="toppings"><label> Mushroom </label>
-  <input type="checkbox" name="toppings"><label> Pineapple (who orders this??) </label><br>
-  <input type="checkbox" name="toppings"><label> Peppers </label>
-  <input type="checkbox" name="toppings"><label> Onions </label><br>
+  <label><input type="radio" name="sauceType" value="marinara" required> Marinara </label><br>
+  <label><input type="radio" name="sauceType" value="ranch"> Ranch </label><br>
+  <label><input type="radio" name="sauceType" value="garlic"> Garlic Parmesan </label><br>
+  <label><input type="radio" name="sauceType" value="noSauce"> No Sauce </label>
 
-  <h2> Additional Instructions </h2>
+  <h2>Select Toppings</h2>
+
+  <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
+  <label><input type="checkbox" name="toppings" value="sausage"> Sausage</label><br>
+
+  <label><input type="checkbox" name="toppings" value="mushroom"> Mushroom</label>
+  <label><input type="checkbox" name="toppings" value="pineapple"> Pineapple (who orders this??)</label><br>
+
+  <label><input type="checkbox" name="toppings" value="peppers"> Peppers</label>
+  <label><input type="checkbox" name="toppings" value="onions"> Onions</label><br>
+
+  <h2>Additional Instructions</h2>
   <textarea name="comments"> Instructions Here </textarea><br>
-  <input type="submit" value="Submit!"><br>
 
-  <br>
-  <table border=1> 
-    <caption> List of my favorite video games </caption>
-    <tr> 
-        <th> Developer </th>
-        <th> Title </th>
-        <th> Year </th>
+  <input type="submit" value="Submit!">
+
+</form>
+
+<br>
+
+<table border="1">
+  <caption>List of my favorite video games</caption>
+
+  <thead>
+    <tr>
+      <th>Developer</th>
+      <th>Title</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td rowspan="2">Epic Games</td>
+      <td>Rocket League</td>
+      <td>2015</td>
     </tr>
     <tr>
-        <td rowspan="2"> Epic Games </td> 
-        <td> Rocket League </td>
-        <td> 2015 </td>
+      <td>Fortnite</td>
+      <td>2017</td>
     </tr>
-    <tr> 
-        <td> Fortnite </td>
-        <td> 2017 </td>
+
+    <tr>
+      <td rowspan="2">Nintendo</td>
+      <td>Mario Kart Wii</td>
+      <td>2008</td>
     </tr>
     <tr>
-        <td rowspan="2"> Nintendo </td>
-        <td> Mario Kart Wii </td>
-        <td> 2008 </td>
+      <td>Mario Odyssey</td>
+      <td>2017</td>
     </tr>
-    <tr> 
-        <td> Mario Odyssey </td>
-        <td> 2017 </td>
-    </tr>
-    <tr> 
-        <td rowspan="2"> Activision </td>
-        <td> Call of Duty: Cold War</td>
-        <td> 2020 </td>
-    </tr>
+
     <tr>
-        <td> Call of Duty: Black Ops 7 </td>
-        <td> 2025 </td>
+      <td colspan="3">Count: 4</td>
     </tr>
-    <tr>
-        <td colspan="3"> Count: 6 </td>
-    </tr>
-  </table>
-  
+  </tbody>
+</table>
+
 </body>
 </html>
