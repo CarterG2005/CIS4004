@@ -3,3 +3,10 @@ body {
     background-color: lightblue;
 }
 
+#paragraph2 {
+    border-style: solid;
+    border-color: green;
+    background-color: white;
+    color: black;
+    line-height: 2.0;
+}
