@@ -11,6 +11,11 @@ h1 {
     
 }
 
+h2 {
+    font-weight: bold;
+    font-family: arial, sans-serif;
+}
+
 #paragraph2 {
     width: 900px;
     margin: 20px;          
