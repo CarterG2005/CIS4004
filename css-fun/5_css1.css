@@ -22,8 +22,9 @@ h1 {
 }
 
 .blue {
-  color: blue;
-  font-size: 16px;
-  line-height: 1.6;
+    blackground-color: darkblue;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
