@@ -6,8 +6,9 @@ body {
 #paragraph2 {
     border-style: solid;
     border-color: green;
+    border-width: 1px;
     background-color: white;
     color: black;
     line-height: 2.0;
-    width: 70%;
+    width: 60%
 }
