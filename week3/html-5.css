@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+#jumpMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100vh;
+    background-color: #D2A741;
+    color: black;
+    padding: 20px;
+}
+
+#jumpMenu a {
+    color: blue;
+    text-decoration: underline;
+    display: block;
+    margin: 18px 0;
+    text-align: center;
+}
+
+#jumpMenu a:hover {
+    color: darkblue;
+}
+
+#jumpMenu a:visited {
+    color: darkblue;
+}
+
+#jumpMenu h2 {
+    text-align: center;
+}
+
+main {
+    margin-left: 15%;
+    padding-top: 100px; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 15%;
+    width: 85%;
+    background-color: red;
+}
+
+header > p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 25px 0;
+    color: black;
+}
+
+header nav {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+header nav button {
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 15px 40px;
+}
+
+header nav button:hover {
+    background-color: #1d4ed8;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 90px;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+article {
+    width: 300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+article h2 {
+    margin-bottom: 10px;
+}
+
+#thanks {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2563eb;
+    color: white;
+    padding: 18px 28px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: #e5e7eb;
+}
