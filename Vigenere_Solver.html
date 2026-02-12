@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+    <title> Vigenere Cipher Solver </title>
+</head>
+<body>
+    <header>
+        <h1> Vigenere Cipher Solver </h1>
+        <nav> <a href="../resume.html"> Go Back to Resume</a> </nav>
+        <br>
+        <img src="IOC.png" alt="Screenshot of the output of the IOC program" width="400" height="250">
+        <img src="MIC.png" alt="Screenshot of the output of the MIC program" width="400" height="250">
+        <img src="Vigenere.png" alt="Screenshot of the output of the Vigenere decrypt program" width="400" height="250">
+    </header>
+
+    <main>
+    <section id="Description">
+        <h2> <u> Project Description: </u> </h2>
+        <p> This Project consists of 3 programs used to break the Vigenere Cipher: </p>
+        <h3> 1. Index of Coincidence Analyzer (IOC.java) </h3>
+        <p>
+            This program computes the Index of Coincidence (IoC) for a ciphertext and uses it to estimate the most likely key length of a Vigenère cipher. 
+            The IoC measures how unevenly letters are distributed in a piece of text. Natural languages like English have a higher IoC than random text, so splitting the ciphertext 
+            into periodic groups (based on a guessed key length) reveals which key lengths produce English‑like distributions.
+            <br>
+            <strong> What this program does: </strong>
+        </p>
+        <ul> 
+            <li> Calculates the IoC of the entire ciphertext </li>
+            <li> Tests key lengths from 1 to 20. </li>
+            <li> Splits the ciphertext into groups based on each candidate key length </li>
+            <li> Computes the average IoC across all groups </li>
+            <li> Highlights key lengths whose IoC values approach that of English text (~0.065), helping the user narrow down the correct key length </li>
+        </ul>
+        <br>
+        <p> In the output above, key length of 10 is closest to the value of english text, so its highly likely that the key length is 10. </p>
+        <br>
+        <br>
+        <h3> 2. Mutual Index of Coincidence Analyzer (MIC.java) </h3>
+        <p> Once a likely key length is known, this program uses the Mutual Index of Coincidence (MIC) to determine the actual key letters. 
+            It compares the frequency distribution of each ciphertext group (formed by taking every k‑th letter) against known English letter frequencies.
+            <br>
+            <strong> What this program does: </strong>
+        </p>
+        <ul>  
+            <li> Computes the relative frequency of each letter </li>
+            <li> Tests all 26 possible Caesar shifts for each letter in the key </li>
+            <li> Calculates the MIC between the shifted group and English frequencies. </li>
+            <li> Selects the shift that produces the highest MIC value </li>
+        </ul>
+        <br>
+        <p> The output gives the best shift for each letter in the key. The numerical value corresponds to a letter (a=0, b=1, c=2, ...) </p>
+        <p> From this, we can get the key word. 0 = a, 25 = z, .... 13 = n. Our key is azerbaijan.
+        <br>
+        <br>
+        <h3> 3. Vigenère Decryption Tool (VigenereDecrypt.java) </h3>
+        <p>
+            After determining the key, this program performs the final step: decrypting the ciphertext. 
+            It applies the standard Vigenère decryption formula, shifting each letter backward by the corresponding key letter.
+            We can plug our ciphertext and keyword into this program and it will decrypt it for us. 
+        </p>
+        <br>
+        <br>
+        <p> Check out the project <a href="https://github.com/CarterG2005/cryptography"> here </a> </p>
+    </section>
+
+    <section id="Skills">
+        <h2> <u> Skills Learned: </u> </h2>
+        <h3> Cryptographic Analysis </h3>
+        <ul>
+            <li> Gained practical experience with classical cipher‑breaking techniques, specifically targeting the Vigenère cipher </li>
+            <li> Applied statistical tools such as the Index of Coincidence (IoC) and Mutual Index of Coincidence (MIC) to infer key lengths and identify likely key shifts </li>
+            <li> Developed an understanding of how language patterns and frequency analysis can be exploited to break substitution‑based encryption </li>
+        </ul>
+    </section>
+    
+    </main>
+
+</body>
+</html>
